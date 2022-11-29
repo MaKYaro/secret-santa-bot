@@ -3,12 +3,15 @@ package main
 import (
 	"flag"
 	"log"
+	"secret-santa-bot/clients/telegram"
+)
+
+const (
+	tgBotHost = "api.telegram.org"
 )
 
 func main() {
-	t := mustToken()
-
-	// tgClient = telegram.New(token)
+	tgClient := telegram.New(mustToken(), tgBotHost)
 
 	// fetcher = fetcher.New(tgClient)
 
